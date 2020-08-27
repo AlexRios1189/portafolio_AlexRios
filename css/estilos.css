@@ -25,8 +25,9 @@ body{
 }
 
 .main img{
-	width: 300px;
+	width: 250px;
 	height: inherit; 
+	box-shadow: 10px 10px 10px black;
 }
 
 .header{
@@ -44,11 +45,13 @@ body{
 	margin: 0px 0px 0px 20px;
 	width: 100px;
 	height: 86px;
+	box-shadow: 10px 10px 10px black;
 }
 
 .header figure img{
 	width: inherit;
 	height: inherit;
+	
 }
 
 ul{
@@ -61,6 +64,7 @@ ul{
 
 li{
 	height: inherit;
+	font-size: 20px;
 }
 
 h1, h2, h3, h4{
