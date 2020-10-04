@@ -9,10 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
+	<figure class="container_menu">
+		<img class="menu_hamburguer" src="img/menu.svg" alt="menu" />
+	</figure>
 	<header class="header">
 		<div class="wrapper">
 		<figure> 
-			<img src="img/AR.svg" alt="Logo AR"/>
+			<img src="img/AR2.svg" alt="Logo AR"/>
 		</figure>
 	<nav class="menu">
 		<ul>
@@ -24,15 +27,15 @@
     </div>
 	</header>
 
-	<!-- <section class="main">
+	<section class="main">
 		<div class="wrapper">
 		<h1>Hola! Soy <span>Alexander Rios</span><br>
 		estudiante de <span>ingenieria en sistemas</span>,<br> 
 		y <span>desarrollador web</span></h1>
 		<figure>
-			<img src="img/foto.jpg" alt="Foto_perfil" height="200" />
+			<img src="img/main.jpg" alt="Foto_perfil" height="200" />
 		</figure>
-	</div> -->
+	</div>
 	</section>
 	<section id="proyecto" class="projects">
 		<div class="wrapper">
@@ -87,7 +90,14 @@
      </article>
       </div>
 	</section>
-	<!--<div class="wrapper">
+
+	<!-- <div class="content_video">
+		<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/eBpdjKarVn4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+   </div> -->
+   
+
+	<div class="wrapper">
 	<h2 class="experience-mainTitle">Experiencia</h2>
 </div>
 	 <section id="experiencia" class="experiences">
@@ -153,9 +163,41 @@
 	<p>Curso de desarrollo web</p>
 	<img src="img/AR.svg" alt="logo" />
    </div>
-   <p>Diseñado por Alex Rios :)</p>
+   <p>Diseñado por Alex Rios 💻🎮</p>
   </div>
-</footer> -->
+</footer>
+
+<script>
+
+	const changes = window.matchMedia('screen and (max-width:767px)');
+
+  const menu = document.querySelector('.menu');
+  const boton = document.querySelector('.menu_hamburguer');
+
+  changes.addListener(validation);
+
+  function validation(event){
+         if(event.matches){
+            boton.addEventListener('click', WatchHiden);
+		 }else{
+			boton.removeEventListener('click', WatchHiden);
+		 }
+  }
+     
+     validation(changes); 
+
+  function WatchHiden(){
+	  if(menu.classList.contains('menu_active')){
+		  menu.classList.remove('menu_active');
+
+	  }else{
+		  menu.classList.add('menu_active');
+	  }
+  }
+
+
+
+</script>
 
 </body>
 </html>
